@@ -14,7 +14,7 @@ gem 'puma', '~> 5.4'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-#gem 'redis', '~> 4.4'
+# gem 'redis', '~> 4.4'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -32,50 +32,50 @@ gem 'faraday', '~> 1.0'
 gem 'faraday_middleware', '~> 1.0'
 
 # Background Jobs
-#gem 'sidekiq', '~> 6.2', '>= 6.2.1'
-#gem 'sidekiq_alive', '~> 2.1', '>= 2.0.6'
-#gem 'sidekiq-cron', '~> 1.2'
-#gem 'sidekiq-failures', '~> 1.0'
-#gem 'sidekiq-status', '~> 1.1', '>= 1.1.4'
-#gem 'sidekiq-throttled', '~> 0.13'
-#gem 'sidekiq-unique-jobs', '~> 7.1', '>= 7.0.9'
+# gem 'sidekiq', '~> 6.2', '>= 6.2.1'
+# gem 'sidekiq_alive', '~> 2.1', '>= 2.0.6'
+# gem 'sidekiq-cron', '~> 1.2'
+# gem 'sidekiq-failures', '~> 1.0'
+# gem 'sidekiq-status', '~> 1.1', '>= 1.1.4'
+# gem 'sidekiq-throttled', '~> 0.13'
+# gem 'sidekiq-unique-jobs', '~> 7.1', '>= 7.0.9'
 
 # ElasticSearch
 # gem 'searchkick', '~> 4.4', '>= 4.4.4'
 
 # Users
-#gem 'pundit', '~> 2.1'
+# gem 'pundit', '~> 2.1'
 
 # Notifications
-#gem 'noticed', '~> 1.4', '>= 1.4.1'
+# gem 'noticed', '~> 1.4', '>= 1.4.1'
 
 # Track Changes
 # gem 'paper_trail', '~> 12.0'
 
 # Soft Delete
-#gem 'discard', '~> 1.2'
+# gem 'discard', '~> 1.2'
 
 # Pagination
-#gem 'pagy', '~> 3.11'
+# gem 'pagy', '~> 3.11'
 
 # Env Variables
 gem 'figaro', '~> 1.2'
 
 # Logging
 gem 'lograge', '~> 0.11'
-#gem 'opentelemetry-api', '~> 1.0.0.rc2'
-#gem 'opentelemetry-exporter-otlp', '~> 0.20'
-#gem 'opentelemetry-instrumentation-all', '~> 0.19'
-#gem 'opentelemetry-sdk', '~> 1.0.0.rc2'
-#gem 'sentry-rails', '~> 4.6'
-#gem 'sentry-ruby', '~> 4.6'
-#gem 'sentry-sidekiq', '~> 4.6'
+# gem 'opentelemetry-api', '~> 1.0.0.rc2'
+# gem 'opentelemetry-exporter-otlp', '~> 0.20'
+# gem 'opentelemetry-instrumentation-all', '~> 0.19'
+# gem 'opentelemetry-sdk', '~> 1.0.0.rc2'
+# gem 'sentry-rails', '~> 4.6'
+# gem 'sentry-ruby', '~> 4.6'
+# gem 'sentry-sidekiq', '~> 4.6'
 
 # Health
-#gem 'health_bit', '~> 0.1'
+# gem 'health_bit', '~> 0.1'
 
 # JSON
-#gem 'jsonapi-serializer', '~> 2.2'
+# gem 'jsonapi-serializer', '~> 2.2'
 gem 'oj', '~> 3.13'
 
 group :development, :test do
