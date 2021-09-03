@@ -101,3 +101,17 @@ It has mistakes on purpose and finding and fixing this mistakes gives you extra 
 - [ ] Caching
 - [ ] Pagination
 - [ ] Anything... Your imagination is the limit
+
+# Development
+
+## Start Environment
+
+- run `yarn install` on root directory
+- run `bundle install` on backend directory
+- run `yarn install` on e2e_tests directory
+- run `yarn install` on frontned directory
+- run `docker-compose up -d` to start stack
+- run `bundle exec rails db:create` on backend directory
+- run `bundle exec rails db:migrate` on backend directory
+- run `bundle exec rails server` on backend directory
+- run `yarn start` on frontend directory
