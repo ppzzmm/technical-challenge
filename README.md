@@ -21,6 +21,19 @@ We're going to be paying close attention to:
 
 And that's it! Good luck! 
 
+## About the application process
+
+**We don't want to make you work without the right expectations, so read this carefully.**
+
+If you found this challenge through GitHub or Twitter, please take into consideration that _we won't be reviewing it untill you've formally started the interview process with us_. That said, feel free to play around with the challenge, use it to study and learn.
+
+To start the Homiengineering application process, apply through one of our dedicated job opening pages:
+
+- Front-end Engineer: https://app.worky.mx/vacante/HOMIE/f1630363148507
+- Back-end Engineer: https://app.worky.mx/vacante/HOMIE/b1630362974239
+
+If your profile seems interesting, we'll contact you to schedule a call. If that one goes well, then we'll give you the green light to start working on the challenge.
+
 ---
 
 ## Github Repositories Catalog (Backend)
