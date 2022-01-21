@@ -25,14 +25,16 @@ And that's it! Good luck!
 
 **We don't want to make you work without the right expectations, so read this carefully.**
 
-If you found this challenge through GitHub or Twitter, please take into consideration that _we won't be reviewing it untill you've formally started the interview process with us_. That said, feel free to play around with the challenge, use it to study and learn.
+Our process usually goes as follows:
 
-To start the Homiengineering application process, apply through one of our dedicated job opening pages:
+1. You apply for an open position. This means that you've sent us your resume and are on our radar. 
+2. A member of our recruiting team schedules a call with you to get to know you more. This is an informal interview. If they think that your profile could fit within our team, you move to the next interview.
+3. The next step is an engineering culture interview. We'll get to know more of you as an engineer, your work philosophy and desired role.
+4. We'll then assess your technical challenge. If your solution sparks our interest, we'll move you to the final technical interview.
+5. In the technical interview we'll ask you to share with us details of your implementation and what you would've done different. This is your opportunity to impress us.
 
-- Front-end Engineer: https://app.worky.mx/vacante/HOMIE/f1630363148507
-- Back-end Engineer: https://app.worky.mx/vacante/HOMIE/b1630362974239
+You may start poking around with the challenge while the interview process is underway. If you found this challenge through GitHub or Twitter, please take into consideration that _we won't be reviewing your challenge submission untill you've formally started the interview process with us_. That said, feel free to play around with the challenge, use it to study and learn.
 
-If your profile seems interesting, we'll contact you to schedule a call. If that one goes well, then we'll give you the green light to start working on the challenge.
 
 ---
 
