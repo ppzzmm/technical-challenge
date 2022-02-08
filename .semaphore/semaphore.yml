@@ -1,26 +1,44 @@
 version: v1.0
-name: Test MyApp
+name: PZMchallenge pipeline
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu2004
-
+    os_image: ubuntu1804
 blocks:
-  - name: Test
+  - name: Install dependencies ⬇️
     task:
-      env_vars:
-        - name: DATABASE_URL
-          value: "postgresql://postgres:@0.0.0.0:5432/myapp_test"
-        - name: RAILS_ENV
-          value: test
-      jobs:
-      - name: Test
+      prologue:
         commands:
+          - sem-version ruby 3.0.1 -f
+      jobs:
+        - name: bundle install
+          commands:
+            - checkout
+            - cache restore
+            - bundle install
+            - cache store
+  - name: "Code analysis \U0001F50E"
+    task:
+      prologue:
+        commands:
+          - sem-version ruby 3.0.1 -f
           - checkout
-          - sem-service start postgres 11
-          - sem-version ruby 2.6.5
           - cache restore
-          - bundle install --deployment --path vendor/bundle
-          - cache store
-          - bundle exec rake db:setup
-          - bundle exec rspec
+          - bundle install
+      jobs:
+        - name: bundle exec rubocop
+          commands:
+            - bundle exec rubocop
+  - name: "Run tests \U0001F9EA"
+    task:
+      prologue:
+        commands:
+          - sem-version ruby 3.0.1 -f
+          - checkout
+          - cache restore
+          - bundle install
+          - 'rake db:migrate RACK_ENV="test"'
+      jobs:
+        - name: bundle exec rspec
+          commands:
+            - bundle exec rspec
