@@ -29,4 +29,5 @@ blocks:
         - name: bundle exec rubocop
           commands:
             - cd backend
+            - bundle install
             - bundle exec rubocop
