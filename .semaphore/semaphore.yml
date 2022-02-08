@@ -15,7 +15,6 @@ blocks:
           commands:
             - checkout
             - cache restore
-            - bundle install
             - cache store
   - name: "Code analysis \U0001F50E"
     task:
