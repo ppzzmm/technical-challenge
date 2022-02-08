@@ -25,10 +25,12 @@ blocks:
           - sem-version ruby 3.0.1 -f
           - checkout
           - cache restore
+          - cd backend
           - bundle install
       jobs:
         - name: bundle exec rubocop
           commands:
+            - cd backend
             - bundle exec rubocop
   - name: "Run tests \U0001F9EA"
     task:
@@ -37,7 +39,8 @@ blocks:
           - sem-version ruby 3.0.1 -f
           - checkout
           - cache restore
-          - cd /backendbundle install
+          - cd /backend
+          - bundle install
           - 'bundle exec rails db:create'
           - 'bundle exec rails db:migrate'
       jobs:
