@@ -27,4 +27,3 @@ rubocop: ## Run rubocop
 
 rubocop-fix: ## Run rubocop with auto-fix
 	bundle exec rubocop -a
-	
