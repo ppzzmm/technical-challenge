@@ -39,8 +39,7 @@ module Users
         url: data['html_url'],
         name: data['name'],
         email: data['email'],
-        avatar_url: data['avatar_url'],
-        repositories: repositories
+        avatar_url: data['avatar_url']
       }
     end
 
