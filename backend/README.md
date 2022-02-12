@@ -12,7 +12,6 @@ $ make help
 
 db-create                      Create the data base for development.
 db-migrate                     Run data base migrations for development.
-dkr-start                      Start Docker.
 redis                          Run redis.
 rubocop-fix                    Run rubocop with auto-fix.
 rubocop                        Run rubocop.

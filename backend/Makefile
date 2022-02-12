@@ -7,9 +7,6 @@ help:
 setup: ## Install dependencies from Gemfile.
 	bundle install
 
-dkr-start: ## Start Docker
-	docker-compose up -d
-
 db-create: ## Create the data base for development
 	bundle exec rails db:create
 
