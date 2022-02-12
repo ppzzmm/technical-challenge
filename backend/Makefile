@@ -27,3 +27,9 @@ rubocop: ## Run rubocop
 
 rubocop-fix: ## Run rubocop with auto-fix
 	bundle exec rubocop -a
+
+redis: ## Run redis
+	redis-server
+
+sidekiq: ## Run sidekiq
+	bundle exec sidekiq -C ./config/sidekiq.yml

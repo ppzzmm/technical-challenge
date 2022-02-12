@@ -18,7 +18,7 @@ describe Users::Create do
     it 'creates a user' do
       result = OpenStruct.new(success?: true, object: user_params.with_indifferent_access)
       allow(Connection::Create).to receive(:run).and_return(result)
-      allow(Repositories::Create).to receive(:run).and_return(true)
+      allow(RepositoriesWorker).to receive(:perform_async)
       response = described_class.run('ppzzmm')
       expect(response).to be_success
       expect(response.object.github_id).to eq 1_234_567

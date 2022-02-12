@@ -46,7 +46,7 @@ module Users
     end
 
     def repositories(user)
-      Repositories::Create.run(user)
+      RepositoriesWorker.perform_async(user.id)
     end
   end
 end
