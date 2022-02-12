@@ -20,7 +20,7 @@ class Api::V1::RepositoriesController < Api::V1::BaseController
   end
 
   def repository_params
-    params.require(:id)
+    params.require(:name)
   end
 
   def find_user
@@ -32,6 +32,6 @@ class Api::V1::RepositoriesController < Api::V1::BaseController
   end
 
   def find_repository
-    @repository = @user&.repositories&.find_by(id: repository_params.to_i)
+    @repository = @user&.repositories&.find_by(name: repository_params)
   end
 end

@@ -12,7 +12,9 @@ RSpec.describe Api::V1::RepositoriesController do
   describe '#show' do
     context 'with a valid params' do
       it 'returns the repository' do
-        get :show, format: :json, params: { user_id: user.id, id: repository1.id }
+        get :show, format: :json, params: { user_id: user.id,
+                                            id: repository1.id,
+                                            name: 'repository' }
         expect(response).to be_successful
         expect(JSON.parse(response.body)['repository']['github_id']).to eq 226_632_462
       end
