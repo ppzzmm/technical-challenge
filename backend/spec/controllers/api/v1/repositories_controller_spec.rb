@@ -3,16 +3,29 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::RepositoriesController do
-  describe '#index' do
-    context 'with a valid user' do
-      it 'returns a list of quotations' do
-        true
+  render_views
+
+  let!(:user) { create(:user) }
+  let!(:repository1) { create(:repository, user_id: user.id) }
+  let!(:repository2) { create(:repository, user_id: user.id) }
+
+  describe '#show' do
+    context 'with a valid params' do
+      it 'returns the repository' do
+        get :show, format: :json, params: { user_id: user.id, id: repository1.id }
+        expect(response).to be_successful
+        expect(JSON.parse(response.body)['repository']['github_id']).to eq 226_632_462
       end
     end
+  end
 
-    context 'with an invalid params' do
-      it 'returns an error' do
-        true
+  describe '#index' do
+    context 'with a valid params' do
+      it 'returns a list of repositories' do
+        get :index, format: :json, params: { user_id: user.id }
+        expect(response).to be_successful
+        repositories = JSON.parse(response.body)['repositories']
+        expect(repositories.count).to eq 2
       end
     end
   end
