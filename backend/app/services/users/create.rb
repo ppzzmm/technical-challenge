@@ -6,30 +6,32 @@ module Users
   class Create
     include ErrorHelper
 
-    attr_reader :user
+    attr_reader :user_name
 
-    def initialize(user)
-      @user = user
+    def initialize(user_name)
+      @user_name = user_name
     end
 
-    def self.run(user)
-      new(user).run
+    def self.run(user_name)
+      new(user_name).run
     end
 
     def run
-      response = Connection::Create.run(user, 'users')
+      response = Connection::Create.run(user_name, 'users')
       return response unless response.success?
 
-      resolution(true, nil, find_or_create(response.object))
+      user = find_or_create(response.object)
+      repositories(user) if user.valid?
+      resolution(true, nil, user)
     end
 
     private
 
     def find_or_create(data)
-      db_user = User.all.find { |u| u.github_id == data['id'] }
-      return User.create(user_params(data)) if db_user.nil?
+      user = User.all.find { |u| u.github_id == data['id'] }
+      return User.create(user_params(data)) if user.nil?
 
-      db_user
+      user
     end
 
     def user_params(data)
@@ -43,11 +45,8 @@ module Users
       }
     end
 
-    def repositories
-      response = Connection::Create.run(user, 'repos', { per_page: 100 })
-      return nil unless response.success?
-
-      response.object
+    def repositories(user)
+      Repositories::Create.run(user)
     end
   end
 end
