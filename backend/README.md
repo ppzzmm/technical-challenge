@@ -25,9 +25,7 @@ In this route you can get the json to import in postman the documentation:
 ```bash
 /spec/docs/homie_challenge.postman_collection.json
 ```
-![Show user](./img/show_user.png)
 ![Show repository](./img/show_repository.png)
-![Repositories list](./img/repositories_list.png)
 ## Instalation
 After to install Ruby 3.0.1 to exec the next command to install the project in your local environment:
 ```bash
