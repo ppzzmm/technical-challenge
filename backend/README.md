@@ -35,9 +35,11 @@ You have to start sidekiq and redis with the next commands:
 ```bash
 $ make redis
 ```
+![redis](./img/redis.png)
 ```bash
 $ make sidekiq
 ```
+![sidekiq](./img/sidekiq.png)
 ## Guide to use
 To test the project in your local environment only you have to exec the next command:
 ```bash
