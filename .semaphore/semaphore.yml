@@ -40,4 +40,5 @@ blocks:
         - name: "\U0001F9EC Rspecs"
           commands:
             - cd backend
+            - bundle install
             - bundle exec rspec
