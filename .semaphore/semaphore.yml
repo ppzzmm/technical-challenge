@@ -31,3 +31,13 @@ blocks:
             - cd backend
             - bundle install
             - bundle exec rubocop
+  - name: "\U0001F9EA Tests"
+    task:
+      prologue:
+        commands:
+          - checkout
+      jobs:
+        - name: "\U0001F9EC Rspecs"
+          commands:
+            - cd backend
+            - bundle exec rspec
