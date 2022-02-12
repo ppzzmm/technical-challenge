@@ -1,5 +1,4 @@
 # HomieChallenge API
-```bash
 This is a REST API to get the users and repositories from GitHub
 ## Requirements
 This API is building on Ruby 3.0.1, first you have to sure that you have that version in your environment, if you do not know how to install Ruby, I recomended to do with rben, for this following the next instructions:
@@ -22,8 +21,8 @@ sidekiq                        Run sidekiq.
 start                          Start application.
 test                           Run test.
 ```
-## Documentación
-In this route you can get the json to import in postman teh documentation of the services: 
+## Documentation
+In this route you can get the json to import in postman the documentation: 
 ```bash
 /spec/docs/homie_challenge.postman_collection.json
 ```
